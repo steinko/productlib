@@ -4,11 +4,13 @@ services:
     build: 
       context: .
       dockerfile:  Dockerfile.app
+    image: appImage
     ports:
      - "3000:3000" 
   cypress:
     build: 
       context: .
       dockerfile: Dockerfile.cypress
+    image: cypressImage  
     depends_on:
       - app

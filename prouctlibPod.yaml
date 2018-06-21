@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: productlib-pod
+spec: 
+  containers:
+     - image: Dockerfile.app:1
+       name: app
+       ports: 
+         - containerPort: 8080
+       name: http
+       protocol: TCP
