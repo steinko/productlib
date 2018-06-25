@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-   name: productlib-pod
+   name: app-pod
+   label: 
+      pod:app-pod
 spec: 
   containers:
-     - image: Dockerfile.app:1
+     - image: steinko/app-productlib:1
        name: app
        ports: 
-         - containerPort: 8080
+         - containerPort: 3000
        name: http
        protocol: TCP

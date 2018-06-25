@@ -1,7 +1,0 @@
-FROM cypress/base AS cypress
-COPY . /test
-WORKDIR /test
-RUN npm i --save-dev cypress
-RUN npm install ajv --save-dev
-
-CMD $(npm bin)/cypress run --record --key 92213f49-6b80-47d5-bbef-2422f308ebf1 -s ./cypress/integration/SystemTest.js

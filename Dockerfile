@@ -1,9 +1,6 @@
-FROM node:9-slim AS app
-ENV PORT 3000
-EXPOSE 3000
-
-COPY . /usr/src/app
+FROM node:9-slim
+ENV PORT 8080
+EXPOSE 8080
 WORKDIR /usr/src/app
-RUN npm install react --save
-RUN npm install ajv --save
+COPY . .
 CMD ["npm", "start"]
