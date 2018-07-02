@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata: 
+  name: systemtest
+  labels:
+     job: systemTest
+spec:
+  template:
+    metadata:
+     labels:
+       job: systemTest
+    spec:
+      containers:
+      - name: cypress-container
+        image: steinko/cypress-productlib:1
+        imagePullPolicy: Always
+      restartPolicy: Never

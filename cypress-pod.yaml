@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: cypress-pod
+spec: 
+  restartPolicy: Never
+  containers:
+     - name: cypress-container
+       image: steinko/cypress-productlib:1 
