@@ -1,26 +1,10 @@
-image: docker:stable
-
-services:
-- docker:dind
-before_script:
-- docker info
-
+image: cypress/base
 cypress-e2e:
-  stage: build
   script:
-    -  docker login -u steinko -p DavidBowie1!
-  
-    -  docker  build  -t steinko/app-productlib:1 -f Dockerfile.app .
-    -  docker  push steinko/app-productlib:1
-    
-    -  docker build -t steinko/cypress-productlib:1 -f Dockerfile.cypress .
-    -  docker push steinko/cypress-productlib:1
-   
-    -  kubectl apply -f app-pod.yaml
-    -  kubectl apply -f app-deployment.yaml
-    -  kubectl apply -f app-service.yaml
-    -  kubectl apply -f cypress-pod.yaml
-    -  kubectl apply -f cypress-job.yaml  
+    - npm install cypress --save-dev
+    - npm start&
+    - $(npm bin)/cypress run --record --key 92213f49-6b80-47d5-bbef-2422f308ebf1 -s ./cypress/integration/SystemTest.js
+
     
     
    
