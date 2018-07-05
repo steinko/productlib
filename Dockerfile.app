@@ -1,7 +1,4 @@
-FROM node:9-slim AS app
-ENV PORT 3000
-EXPOSE 3000
-
+FROM node:9-slim 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN npm install react --save

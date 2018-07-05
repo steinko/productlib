@@ -2,12 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: app-service
-  labels:
-    pod: app-pod
 spec:
-  image: steinko/app-productlib:1
-  ports:
-    port: 3000
-    protocol: TCP
   selector:
-    service: app-service
+    app: app-pod-lable
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+ 
