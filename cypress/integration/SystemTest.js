@@ -1,10 +1,8 @@
 describe("Spesifies client behaivior", () => {
 	
 	beforeEach( () => {
-		cy.visit('http://localhost:3000')
-		  
+		cy.visit('http://localhost:3000')  
 		})
-	
 	
 	it('should display hellp in div element with class item', function() {
 	   const element =cy.get('div[class="item"]');
@@ -18,11 +16,7 @@ describe("Spesifies client behaivior", () => {
 		expect(element).to.exist
 		const image = element.find('img');
 		expect(image).to.exist
-		element.contains('Snow Board')
-	   });
-	
-	
-	
+ });
 	
 	
 	it("should be true" , function() {
