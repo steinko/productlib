@@ -1,7 +1,6 @@
 image: cypress/base
 cypress-e2e:
   script:
-    -../../node_modules/.bin/eslint Product.jsx
     - npm install cypress --save-dev
     - npm start&
     - $(npm bin)/cypress run --record --key 92213f49-6b80-47d5-bbef-2422f308ebf1 -s ./cypress/integration/SystemTest.js
