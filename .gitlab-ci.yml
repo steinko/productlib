@@ -8,7 +8,7 @@ cypress-e2e:
     - npm install eslint --save-dev
     - npm install eslint-plugin-react --save-dev
     - cd ./src/components
-    -../../node_modules/.bin/eslint Product.jsx
+    - ../../node_modules/.bin/eslint Product.jsx
 
     
     
