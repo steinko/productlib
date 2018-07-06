@@ -4,6 +4,10 @@ cypress-e2e:
     - npm install cypress --save-dev
     - npm start&
     - $(npm bin)/cypress run --record --key 92213f49-6b80-47d5-bbef-2422f308ebf1 -s ./cypress/integration/SystemTest.js
+    - npm install eslint --save-dev
+    - npm install eslint-plugin-react --save-dev
+    - cd ./src/components
+    - ../../node_modules/.bin/eslint Product.jsx
 
     
     
