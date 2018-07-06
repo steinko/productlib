@@ -1,5 +1,5 @@
 import React from 'react'
-export class Product extends React.Component {
+export default class Product extends React.Component {
   render () {
     return (
       <div className = 'item'>

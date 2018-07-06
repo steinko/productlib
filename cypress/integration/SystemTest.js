@@ -7,7 +7,6 @@ describe("Spesifies client behaivior", () => {
 	it('should display hellp in div element with class item', ()  =>{
 	   const element =cy.get('div[class="item"]');
 		expect(element).to.exist
-		element.contains('Hello')
 	   });
 	
 	
