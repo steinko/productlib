@@ -1,5 +1,6 @@
 import React from 'react'
 import {products} from './Seed'
+import Product from './Product'
 export default class ProductList extends React.Component {
   render () {
     const product = products[0]
