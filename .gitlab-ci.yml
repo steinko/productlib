@@ -11,7 +11,7 @@ cypress-e2e:
     - npm install --save-dev eslint-plugin-chai-friendly
     - npm start&
     - $(npm bin)/cypress run --record --key 92213f49-6b80-47d5-bbef-2422f308ebf1
-    - ../../node_modules/.bin/eslint ./src/components/**
+    - ./node_modules/.bin/eslint ./src/components/**
    
     
 
