@@ -6,34 +6,44 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "cypress": "cypress open",
-    "cypress:all": "cypress run --browser chrome"
+    "scripts": {
+      "cypress:run": "./node_modules/.bin/cypress run",
+      "cypress:open": "./node_modules/.bin/cypress open"
+    }
   },
   "author": "CodeMix",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "react-scripts": "^1.1.1"
   },
   "devDependencies": {
+    "ajv": "^6.5.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "cheerio": "^1.0.0-rc.2",
     "css-loader": "^0.28.7",
-    "cypress": "^2.1.0",
-    "eslint": "^5.0.1",
+    "cypress": "^3.0.2",
+    "cypress-eslint-preprocessor": "^1.2.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.18.0",
     "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-cypress": "^2.0.1",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
     "hoek": "^5.0.3",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }
