@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Product from './components/Product'
+import ProductList from './components/ProductList'
 
-ReactDOM.render(<Product />, document.getElementById('root'));
+ReactDOM.render(<ProductList />, document.getElementById('root'));
