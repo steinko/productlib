@@ -1,9 +1,9 @@
 describe('Spesifies end to end (system) test', () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit('http://localhost:3000')
   })
-  it('should display hellp in div element with class item', () => {
-    cy.get('div[class="item"]').should('have.class', 'item')
+ it('should have to prodcts as childred', () => { 
+   cy.get('div.item').should('have.length', 2)
   })
   it('should be true', () => {
     expect(true).to.equal(true)

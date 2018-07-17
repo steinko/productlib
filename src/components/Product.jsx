@@ -4,7 +4,7 @@ export default class Product extends React.Component {
     return (
       <div className = 'item'>
         <div className = 'image'>
-          <img src= {this.props.productImageUrl} alt="Snow Board" ></img>
+          <img src= {this.props.productImageUrl} alt="Product" ></img>
         </div>
         <div className = 'middel-aligned-content'>
           <div className ='header'>
@@ -18,7 +18,7 @@ export default class Product extends React.Component {
           <div className = 'description'>
 
             <a>{this.props.title}</a>
-            <p>Cool Snow Board</p>
+            <p>{this.props.description}</p>
           </div>
           <div className = 'extra'>
             <span>Submitted by:</span>
