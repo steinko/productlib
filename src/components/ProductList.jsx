@@ -5,6 +5,7 @@ export default class ProductList extends React.Component {
   render () {
     const productComponents = products.map((product) => (
       <Product
+        key = { 'product-' + product.id }
         id = { product.id }
         title = { product.title }
         description = {product.description }

@@ -10,8 +10,8 @@ describe('unit test Product', () => {
   var product1
   var product2
   before(() => {
-    product1 = shallow(<Product productImageUrl ='productImage' url = '#1' votes= '41' title = 'Snow Board' description = 'Cool Snow Board' submitterAvatarUrl = 'Avatar' />)
-    product2 = shallow(<Product productImageUrl ='coolproductImage' url = '#2' votes= '46' title = 'Strawberries' description = 'Strawberries Forever' submitterAvatarUrl = 'FemailAvatar' />)
+    product1 = shallow(<Product id = '1' productImageUrl = 'productImage' url = '#1' votes = '41' title = 'Snow Board' description = 'Cool Snow Board' submitterAvatarUrl = 'Avatar' />)
+    product2 = shallow(<Product id = '2' productImageUrl = 'coolproductImage' url = '#2' votes = '46' title = 'Strawberries' description = 'Strawberries Forever' submitterAvatarUrl = 'FemailAvatar' />)
   })
   it('should esit a div element with class images and a', () => {
     expect(product1.find('div.image').hasClass('image')).to.equal(true)
@@ -20,6 +20,9 @@ describe('unit test Product', () => {
   })
   it('should exist a div element with class item in productlist', () => {
     expect(product1.find('div.item').hasClass('item')).to.equal(true)
+     expect(product1.instance().props.id).to.equal('1')
+    expect(product2.instance().props.id).to.equal('2')
+    
   })
   it('shoulcheck div element with class middel aligned content', () => {
     const MACelement = product1.find('div.middel-aligned-content')
