@@ -12,6 +12,8 @@ before_script:
 - npm install eslint-plugin-cypress --save-dev
 - npm install cypress-eslint-preprocessor --save-dev
 - npm install --save-dev eslint-plugin-chai-friendly
+- npm install --save-dev babel-preset-react
+- npm install --save-dev babel-plugin-transform-class-properties
 - npm start -- --silent &
 script:
 - $(npm bin)/cypress run
