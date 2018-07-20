@@ -17,5 +17,5 @@ script:
 - $(npm bin)/cypress run --record --key 92213f49-6b80-47d5-bbef-2422f308ebf1
 - ./node_modules/.bin/eslint -c ./.eslintrc.json  ./src/components/**
 - sonar-scanner  -Dsonar.projectKey=Productlib -Dsonar.organization=steinko-github
-  -Dsonar.sources=./src/componets -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6472ac35c070752487408fd8c946cca6b536eec2
+  -Dsonar.sources=./src/components -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6472ac35c070752487408fd8c946cca6b536eec2
   -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
