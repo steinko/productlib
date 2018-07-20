@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- node
+addons:
+  sonarcloud: 
+before_script:
+- npm install --save-dev cypress@3.0.2
+- npm i --save-dev react
+- npm i --save-dev enzyme enzyme-adapter-react-16
+- npm install eslint --save-dev
+- npm install eslint-plugin-react --save-dev
+- npm install eslint-plugin-cypress --save-dev
+- npm install cypress-eslint-preprocessor --save-dev
+- npm install --save-dev eslint-plugin-chai-friendly
+- npm start -- --silent &
+script:
+- $(npm bin)/cypress run
+- ./node_modules/.bin/eslint -c ./.eslintrc.json  ./src/components/**
+- sonar-scanner   -Dsonar.projectKey=productlib   -Dsonar.organization=steinko-github   -Dsonar.sources=./src/components   -Dsonar.host.url=https://sonarcloud.io   -Dsonar.login=7658edeb2b312864ba1605433ea98e74f2a6aaa2
