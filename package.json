@@ -6,6 +6,7 @@
   "scripts": {
     "test": "istanbul cover node_modules/cypress/bin/cypress",
     "start": "react-scripts start",
+    "start-webpack": "webpack --config webpack.config.js",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "scripts": {
@@ -20,11 +21,12 @@
     "react-scripts": "^1.1.1"
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^2.0.1",
     "ajv": "^6.5.2",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "chai-enzyme": "^1.0.0-beta.1",
@@ -43,9 +45,15 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
+    "file-loader": "^1.1.11",
     "hoek": "^5.0.3",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.3.1",
     "lodash": "^4.17.10",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
   }
 }
