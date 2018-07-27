@@ -1,12 +1,10 @@
 import React from 'react'
 export default class Product extends React.Component {
-  constructor (props) {
-    super(props)
-    this.handleUpVote = this.handleUpVote.bind(this)
-  }
-  handleUpVote () {
+
+  handleUpVote = () => {
     this.props.onVote(this.props.id)
   }
+  
   render () {
     return (
       <div className = 'item'>

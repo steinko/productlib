@@ -13,6 +13,7 @@ before_script:
 - npm i --save-dev babel-preset-env
 - npm i --save-dev babel-preset-react
 - npm i --save-dev babel-loader
+- npm i --save-dev babel-plugin-transform-class-properties
 - npm i --save-dev webpack-preprocessor
 - npm i --save-dev html-webpack-plugin html-loader
 - npm i --save-dev image-webpack-loader 
