@@ -3,7 +3,7 @@ import {seedProducts} from './Seed'
 import Product from './Product'
 export default class ProductList extends React.Component {
   
-  this.state = { products: [] }
+  state = { products: [] }
 
   componentDidMount () {
     this.setState({

@@ -1,5 +1,6 @@
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const path = require('path')
 module.exports = {
 		   module: {
 		    rules: [
@@ -24,9 +25,19 @@ module.exports = {
 		                'babel-preset-env',
 		                'babel-preset-react',
 		              ],
-		              plugins: 'transform-class-properties' 
+		              plugins: ['transform-class-properties' ]
 		                  }
 		             }
+		      },
+		      {
+		      test: /\.(jsx|js)$/,
+		        include: path.resolve(__dirname, '../src'),
+		        use: {
+		                loader: 'istanbul-instrumenter-loader',
+		                options: {
+		                  esModules: true,
+		                },
+		              },
 		      },
 		      {
 		          test: /\.html$/,

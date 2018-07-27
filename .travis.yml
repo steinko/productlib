@@ -26,5 +26,4 @@ before_script:
 - npm start -- --silent &
 script:
 - $(npm bin)/cypress run
-- ./node_modules/.bin/eslint -c ./.eslintrc.json  ./src/components/**
 - sonar-scanner   -Dsonar.projectKey=productlib   -Dsonar.organization=steinko-github   -Dsonar.sources=./src/components   -Dsonar.host.url=https://sonarcloud.io   -Dsonar.login=7658edeb2b312864ba1605433ea98e74f2a6aaa2
