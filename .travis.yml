@@ -14,14 +14,14 @@ before_script:
 - npm i --save-dev babel-preset-react
 - npm i --save-dev babel-loader
 - npm i --save-dev webpack-preprocessor
-- npm i html-webpack-plugin html-loader --save-dev
-- npm i image-webpack-loader --save-dev
-- npm install file-loader --save-dev
-- npm install eslint --save-dev
-- npm install eslint-plugin-react --save-dev
-- npm install eslint-plugin-cypress --save-dev
-- npm install cypress-eslint-preprocessor --save-dev
-- npm install --save-dev eslint-plugin-chai-friendly
+- npm i --save-dev html-webpack-plugin html-loader
+- npm i --save-dev image-webpack-loader 
+- npm i --save-dev file-loader 
+- npm i --save-dev eslint
+- npm i --save-dev eslint-plugin-react
+- npm i --save-dev eslint-plugin-cypress 
+- npm i --save-dev eslint-loader
+- npm i --save-dev eslint-plugin-chai-friendly
 - npm start -- --silent &
 script:
 - $(npm bin)/cypress run

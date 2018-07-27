@@ -1,9 +1,7 @@
-import avatar from '../images/avatar.png' 
+import avatar from '../images/avatar.png'
 import snowboard from '../images/Banana-Snowboard.png'
 import femaleAvatar from '../images/FemaleAvatar.png'
 import sugarinStrawberries from '../images/sugarinstrawberries.jpg'
-
-
 
 const seedProducts =
   [
@@ -12,7 +10,7 @@ const seedProducts =
       description: 'On demand sand castle expertise',
       url: '#',
       votes: 41, // generateVoteCount(),
-      submitterAvatarUrl:  avatar,
+      submitterAvatarUrl: avatar,
       productImageUrl: snowboard
     },
     { id: 2,
@@ -25,4 +23,4 @@ const seedProducts =
     }
   ]
 
-export  {seedProducts}
+export {seedProducts}

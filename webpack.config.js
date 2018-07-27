@@ -1,9 +1,20 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
-		  module: {
+		   module: {
 		    rules: [
-		      {
+		    	     {enforce: "pre",
+		    	      test: /\.(js|jsx)$/,
+		    	      exclude: /node_modules/,
+		    	      use: {
+		    	    	  loader: 'eslint-loader',
+		    	          options: {
+		    	    	     configFile:  './.eslintrc.json'
+		    	             }
+		    	         }
+		    	        },
+		  
+		    	    {
 		        test: /\.(js|jsx)$/,
 		        exclude: /node_modules/,
 		        use: {
@@ -18,6 +29,7 @@ module.exports = {
 		      },
 		      {
 		          test: /\.html$/,
+		          exclude: /node_modules/,
 		          use: [
 		            {
 		              loader: "html-loader"
@@ -26,6 +38,7 @@ module.exports = {
 		      },
 		      {
 		    	  test: /\.(gif|png|jpe?g|svg)$/i,
+		    	  exclude: /node_modules/,
 		    	  use: [
 		    	    'file-loader',
 		    	    {
@@ -36,7 +49,7 @@ module.exports = {
 		    	      },
 		    	    },
 		    	  ],
-		    	}
+		    	},
 		    ]
 		  },
 		  plugins: [

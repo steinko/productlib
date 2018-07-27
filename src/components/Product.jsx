@@ -1,18 +1,12 @@
 import React from 'react'
 export default class Product extends React.Component {
-
-  constructor(props) {
-     super(props)
-     this.handleUpVote = this.handleUpVote.bind(this)
-   }
-   
-  handleUpVote()
-   {
-      this.props.onVote(this.props.id)
-   }
-   
-  
-   
+  constructor (props) {
+    super(props)
+    this.handleUpVote = this.handleUpVote.bind(this)
+  }
+  handleUpVote () {
+    this.props.onVote(this.props.id)
+  }
   render () {
     return (
       <div className = 'item'>
@@ -22,7 +16,7 @@ export default class Product extends React.Component {
         <div className = 'middel-aligned-content'>
           <div className ='header'>
             <a onClick= {this.handleUpVote}>
-              <i className = 'large-caret-up-icon' /> 
+              <i className = 'large-caret-up-icon' />
                click
             </a>
             {this.props.votes}
@@ -37,10 +31,10 @@ export default class Product extends React.Component {
           </div>
           <div className = 'extra'>
             <span>Submitted by:</span>
-            <img 
-               className = 'ui-avatar-image'
-                src= {this.props.submitterAvatarUrl} alt="Avatar"
-              />
+            <img
+              className = 'ui-avatar-image'
+              src= {this.props.submitterAvatarUrl} alt="Avatar"
+            />
           </div>
         </div>
       </div>
