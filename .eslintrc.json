@@ -8,6 +8,7 @@
   "plugins": [
     "cypress",
     "react"
+   
   ],
   "env": {
     "cypress/globals": true
@@ -17,8 +18,7 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "no-unused-vars": "off",
-    "react/prop-types":"off"
-    
+    "react/prop-types":"off" 
   },
   "settings": {
     "react": {

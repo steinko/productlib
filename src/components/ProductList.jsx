@@ -1,21 +1,26 @@
-import React from 'react'
+
+import  React from 'react'
 import {seedProducts} from './Seed'
 import Product from './Product'
-export default class ProductList extends React.Component {
-  
-  state = { products: [] }
 
-  componentDidMount () {
-    this.setState({
-      products: seedProducts
-    })
+
+export default class ProductList extends React.Component {
+  constructor(props:Props) {
+    super(props)
+    this.state = { products: []}
+    this.handleProductUpVote = this.handleProductUpVote.bind(this)
   }
 
-  handleProductUpVote = (productId) => {
+
+  handleProductUpVote (productId:number )  {
+  
     const nextProducts = this.state.products.map((product) => {
       if (product.id === productId) {
-        return Object.assign({ }, product, {
-          votes: product.votes + 1 })
+           return Object.assign({} , product, {  
+                  votes: product.votes + 1 
+               })
+          
+         
       } else {
         return product
       }
@@ -24,7 +29,11 @@ export default class ProductList extends React.Component {
       products: nextProducts
     })
   }
-
+ componentDidMount () {
+    this.setState({
+      products: seedProducts
+    })
+  }
   render () {
     const products = seedProducts.sort((a, b) => (
       a.votes - b.votes

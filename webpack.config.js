@@ -24,20 +24,24 @@ module.exports = {
 		              presets: [
 		                'babel-preset-env',
 		                'babel-preset-react',
+		                'babel-preset-flow'
 		              ],
-		              plugins: ['transform-class-properties' ]
-		                  }
-		             }
+		             
+		          }
+		    	}
 		      },
 		      {
 		      test: /\.(jsx|js)$/,
 		        include: path.resolve(__dirname, '../src'),
+		        exclude: /node_modules|\.spec\.js$/,
 		        use: {
 		                loader: 'istanbul-instrumenter-loader',
 		                options: {
 		                  esModules: true,
 		                },
 		              },
+		         enforce: 'post',
+		         
 		      },
 		      {
 		          test: /\.html$/,

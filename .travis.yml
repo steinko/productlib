@@ -14,6 +14,8 @@ before_script:
 - npm i --save-dev babel-preset-react
 - npm i --save-dev babel-loader
 - npm i --save-dev babel-plugin-transform-class-properties
+- npm i --save-dev babel-preset-flow
+- npm i --save-dev flow-bin
 - npm i --save-dev webpack-preprocessor
 - npm i --save-dev html-webpack-plugin html-loader
 - npm i --save-dev image-webpack-loader 
@@ -23,6 +25,8 @@ before_script:
 - npm i --save-dev eslint-plugin-cypress 
 - npm i --save-dev eslint-loader
 - npm i --save-dev eslint-plugin-chai-friendly
+- npm i --save-dev instanbul
+- npm i --save-dev istanbul-instrumenter-loader
 - npm start -- --silent &
 script:
 - $(npm bin)/cypress run

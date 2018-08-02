@@ -1,7 +1,24 @@
-import React from 'react'
-export default class Product extends React.Component {
+// @flow
+import * as React from 'react'
+ type ProductProps = {
+         
+          id: number,
+          title: string,
+          description: string,
+          url: string,
+          votes: number,
+          submitterAvatarUrl: string,
+          productImageUrl: string,
+          onVote: Function
+          }
 
-  handleUpVote = () => {
+export default class Product extends React.Component <ProductProps>{
+constructor (props: ProductProps) {
+   super(props)
+   this.handleUpVote = this.handleUpVote.bind(this)
+  }
+
+  handleUpVote () : void {
     this.props.onVote(this.props.id)
   }
   
