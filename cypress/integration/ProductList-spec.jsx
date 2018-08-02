@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import ProductList from '../../src/components/ProductList'
 import Product from '../../src/components/Product'
 
-configure({ adapter: new Adapter() })
+configure({adapter: new Adapter()})
 
 describe('ProductList unit testing', () => {
   var productList

@@ -3,9 +3,9 @@ import {seedProducts} from './Seed'
 import Product from './Product'
 
 export default class ProductList extends React.Component {
-  constructor(props:Props) {
+  constructor(props) {
     super(props)
-    this.state = { products: []}
+    this.state = {products: []}
     this.handleProductUpVote = this.handleProductUpVote.bind(this)
   }
 
