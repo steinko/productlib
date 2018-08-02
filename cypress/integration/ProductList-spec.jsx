@@ -9,7 +9,6 @@ configure({ adapter: new Adapter() })
 
 describe('ProductList unit testing', () => {
   var productList
-  
   beforeEach(() => {
     productList = shallow(<ProductList />)
   })

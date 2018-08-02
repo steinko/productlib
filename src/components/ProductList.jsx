@@ -1,8 +1,6 @@
-
 import  React from 'react'
 import {seedProducts} from './Seed'
 import Product from './Product'
-
 
 export default class ProductList extends React.Component {
   constructor(props:Props) {
@@ -11,16 +9,12 @@ export default class ProductList extends React.Component {
     this.handleProductUpVote = this.handleProductUpVote.bind(this)
   }
 
-
-  handleProductUpVote (productId:number )  {
-  
+  handleProductUpVote (productId)  {
     const nextProducts = this.state.products.map((product) => {
       if (product.id === productId) {
            return Object.assign({} , product, {  
                   votes: product.votes + 1 
                })
-          
-         
       } else {
         return product
       }

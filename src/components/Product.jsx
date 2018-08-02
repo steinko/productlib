@@ -18,7 +18,7 @@ constructor (props: ProductProps) {
    this.handleUpVote = this.handleUpVote.bind(this)
   }
 
-  handleUpVote () : void {
+  handleUpVote (): void {
     this.props.onVote(this.props.id)
   }
   
