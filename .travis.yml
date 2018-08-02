@@ -1,13 +1,15 @@
 language: node_js
 node_js:
 - lts/*
+
 addons:
   sonarcloud: 
+  
 install:
 - npm install --save-dev cypress@3.0.2
 - npm i --save-dev react
-- npm i --save-dev enzyme enzyme-adapter-react-16
 - npm i --save-dev webpack
+- npm i --save-dev enzyme enzyme-adapter-react-16
 - npm i --save-dev webpack-cli
 - npm i --save-dev babel-core
 - npm i --save-dev babel-preset-env
@@ -24,9 +26,9 @@ install:
 - npm i --save-dev eslint-plugin-react
 - npm i --save-dev eslint-plugin-cypress 
 - npm i --save-dev eslint-loader
-- npm i --save-dev eslint-plugin-chai-friendly
-- npm i --save-dev instanbul
+- npm i --save-dev istanbul
 - npm i --save-dev istanbul-instrumenter-loader
+
 before_script:
 - npm start -- --silent &
 script:
