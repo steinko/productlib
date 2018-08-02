@@ -6,11 +6,16 @@ addons:
   sonarcloud: 
   
 install:
-- npm install --save-dev cypress@3.0.2
-- npm i --save-dev react
 - npm i --save-dev webpack
-- npm i --save-dev enzyme enzyme-adapter-react-16
 - npm i --save-dev webpack-cli
+- npm i --save-dev webpack-preprocessor
+- npm i --save-dev html-webpack-plugin
+- npm i --save-dev image-webpack-loader 
+- npm i --save-dev html-loader
+- npm i --save-dev file-loader 
+- npm i --save-dev cypress
+- npm i --save-dev react
+- npm i --save-dev enzyme enzyme-adapter-react-16
 - npm i --save-dev babel-core
 - npm i --save-dev babel-preset-env
 - npm i --save-dev babel-preset-react
@@ -18,19 +23,17 @@ install:
 - npm i --save-dev babel-plugin-transform-class-properties
 - npm i --save-dev babel-preset-flow
 - npm i --save-dev flow-bin
-- npm i --save-dev webpack-preprocessor
-- npm i --save-dev html-webpack-plugin html-loader
-- npm i --save-dev image-webpack-loader 
-- npm i --save-dev file-loader 
 - npm i --save-dev eslint
 - npm i --save-dev eslint-plugin-react
 - npm i --save-dev eslint-plugin-cypress 
 - npm i --save-dev eslint-loader
+- npm i --save-dev eslint-plugin-flowtype
 - npm i --save-dev istanbul
 - npm i --save-dev istanbul-instrumenter-loader
 
 before_script:
 - npm start -- --silent &
+
 script:
 - $(npm bin)/cypress run
 - sonar-scanner   -Dsonar.projectKey=productlib   -Dsonar.organization=steinko-github   -Dsonar.sources=./src/components   -Dsonar.host.url=https://sonarcloud.io   -Dsonar.login=7658edeb2b312864ba1605433ea98e74f2a6aaa2

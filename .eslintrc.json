@@ -3,11 +3,13 @@
     [
       "eslint:recommended", 
       "plugin:react/recommended"
+      "plugin:flowtype/recommended"
     ],
 
   "plugins": [
     "cypress",
-    "react"
+    "react",
+    "flowtype"
    
   ],
   "env": {
