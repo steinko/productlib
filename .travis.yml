@@ -3,7 +3,7 @@ node_js:
 - lts/*
 addons:
   sonarcloud: 
-before_script:
+install:
 - npm install --save-dev cypress@3.0.2
 - npm i --save-dev react
 - npm i --save-dev enzyme enzyme-adapter-react-16
@@ -27,6 +27,7 @@ before_script:
 - npm i --save-dev eslint-plugin-chai-friendly
 - npm i --save-dev instanbul
 - npm i --save-dev istanbul-instrumenter-loader
+before_script:
 - npm start -- --silent &
 script:
 - $(npm bin)/cypress run
