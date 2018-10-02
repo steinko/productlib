@@ -1,4 +1,7 @@
 # codemix-vanilla-react
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/steinko/productlib.svg)](https://greenkeeper.io/)
+
 Template for project creation of React inside CodeMix
 
 ## Contents
