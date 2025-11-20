@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "istanbul": "^0.4.5",
-    "react-scripts": "^1.1.1"
+    "react-scripts": "^2.0.3"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^2.0.1",
